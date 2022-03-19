@@ -29,7 +29,7 @@ function organize(srcPath){
     }
     ////3.scan the entire srcPath (downloads folder in this case)
     let allFiles=fs.readdirSync(srcPath);
-    //console.log(allFiles);
+    console.log("the files are",allFiles);
 
     //4.traverse over all the files and classify them on the basis of their extension(.pdf,.mp3)
     for(let i=0;i<allFiles.length;i++){
