@@ -46,7 +46,7 @@ function organize(srcPath){
         let ext=path.extname(allFiles[i]).split(".")[1];
         //console.log(ext);
         //1.2)get folder name from extention
-        let folderName=getFolderName(ext);//archives
+        let folderName=getFolderName(ext.toLowerCase());//archives
         console.log(folderName);
         //1.3)copy from src folder (srcPath) and paste in dest folder(folder_name e.g. document,media etc)
                        //copy  //what to  copy //destination
@@ -88,8 +88,8 @@ function copyFileToDest(srcPath,fullPathOfFile,folderName){
     //magic
 }
 
-//let srcPath="C:\\Users\\Dell\\Desktop\\FJP-NADOS\\learning\\Node\\fileOrganizer\\downloads"; 
-//organize(srcPath);
+let srcPath="C:\\Users\\Dell\\Desktop\\FJP-NADOS\\learning\\Node\\fileOrganizer\\downloads"; 
+organize(srcPath);
 module.exports={
     organize:organize
 }
