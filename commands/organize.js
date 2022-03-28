@@ -73,7 +73,7 @@ function copyFileToDest(srcPath,fullPathOfFile,folderName){
     //magic
     //1. tell the path of folderName
     let destFolderPath=path.join(srcPath,"organized_files",folderName);//...../document/organized_files/archives
-    //console.log(des);
+    console.log("folder name is",destFolder);
     //2. check folder if exists,if it does not ,then make folder
     if(!fs.existsSync(destFolderPath)){
         fs.mkdirSync(destFolderPath);
